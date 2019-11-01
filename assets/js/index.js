@@ -44,16 +44,16 @@ $(document).ready(function(){
             $('.content').load('home.html');
             body.classList.add("home");
         }else if (sidebar == "news") {
-            $('.content').load('news.html');
+            $('.content').load('news.html').fadeIn('slow');
             body.classList.remove("home");
         }else if (sidebar == "jobvacancy") {
-            $('.content').load('jobvacancy.html');
+            $('.content').load('jobvacancy.html').fadeIn('slow');
             body.classList.remove("home");
         }else if (sidebar == "rules") {
-            $('.content').load('rulespolicy.html');
+            $('.content').load('rulespolicy.html').fadeIn('slow');
             body.classList.remove("home");
         }
     });
 
-    $('.content').load('home.html');
+    $('.content').load('home.html').fadeIn('slow');
 });
