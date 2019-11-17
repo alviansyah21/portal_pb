@@ -10,33 +10,6 @@ $(document).ready(function(){
         });
     }
 
-    $(function () {
-
-        if (localStorage.chkbox && localStorage.chkbox != '') {
-            $('#inputRemember').attr('checked', 'checked');
-            $('#inputNIK').val(localStorage.username);
-            $('#inputPassword').val(localStorage.pass);
-        } else {
-            $('#inputRemember').removeAttr('checked');
-            $('#inputNIK').val('');
-            $('#inputPassword').val('');
-        }
-    
-        $('#inputRemember').click(function () {
-    
-            if ($('#inputRemember').is(':checked')) {
-                // save username and password
-                localStorage.username = $('#inputNIK').val();
-                localStorage.pass = $('#inputPassword').val();
-                localStorage.chkbox = $('#inputRemember').val();
-            } else {
-                localStorage.username = '';
-                localStorage.pass = '';
-                localStorage.chkbox = '';
-            }
-        });
-    });
-
     $('.click_sidebar').click(function(){
         var body = document.getElementsByTagName("BODY")[0];
         var sidebar = $(this).attr('id');
@@ -48,9 +21,6 @@ $(document).ready(function(){
             body.classList.remove("home");
         }else if (sidebar == "jobvacancy") {
             $('.content').load('jobvacancy.html').fadeIn('slow');
-            body.classList.remove("home");
-        }else if (sidebar == "rules") {
-            $('.content').load('rulespolicy.html').fadeIn('slow');
             body.classList.remove("home");
         }
     });
